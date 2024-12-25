@@ -1,3 +1,3 @@
-#Better Off Studio Website
+# Better Off Studio Clone
 
 In Progress

@@ -74,3 +74,10 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
         ease: 'none'
     })
 })
+
+gsap.to(".subscribe_div", {
+    xPercent: -100,
+    duration: 40,
+    repeat: -1,
+    ease: "none",
+});

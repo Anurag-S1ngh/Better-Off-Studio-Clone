@@ -7,9 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    Noto Sans, sans-serif, "Segoe UI", Helvetica, Arial, "Apple Color Emoji",
-    "Segoe UI Emoji";
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -58,6 +56,7 @@ header {
 .landing_page {
   padding: 2rem 1.5rem;
   margin-top: 6rem;
+  padding-bottom: 0;
 }
 
 .landing_page_box_1 {
@@ -142,9 +141,9 @@ header {
 }
 
 .landing_page_box_2 h2 {
-  font-size: 3.5vw;
+  font-size: 3.1vw;
   line-height: 3.5vw;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .line_below {
@@ -185,4 +184,31 @@ header {
 .line_below_hover:hover::after {
   width: 100%;
   left: 0;
+}
+
+.subscribe_track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.subscribe_div h1 {
+  font-family: "Roboto Flex", serif;
+  font-size: 28rem;
+  font-weight: 800;
+  white-space: nowrap;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.subscribe_track img {
+  height: 20rem;
+  margin-bottom: 0.8rem;
+}
+
+.subscribe_div {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

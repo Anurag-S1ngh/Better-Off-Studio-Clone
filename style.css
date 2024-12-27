@@ -7,8 +7,9 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, "Segoe UI", Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
 }
 
 body {
@@ -40,11 +41,14 @@ header {
   color: #010000;
 }
 
-.nav a {
+.pricing_span {
   grid-column: 12;
-  font-size: 1.25rem;
   justify-self: end;
   color: #010000;
+}
+
+.pricing_span a {
+  font-size: 1.3rem;
 }
 
 .logo svg {
@@ -83,30 +87,40 @@ header {
 .landing_page_box_1 .container::after {
   position: absolute;
   content: "";
-  width: 97%;
+  width: 100%;
   height: 1px;
   background-color: #010000;
   bottom: -0.3rem;
-  transition: all 0.7s ease;
+  left: 0;
+  transition: all 0.25s ease 0.4s;
+}
+
+.landing_page_box_1 .container:hover:after {
+  width: 0%;
+  left: auto;
+  right: 0;
+  transition-delay: 0.1s;
 }
 
 .landing_page_box_1 .container::before {
   position: absolute;
   content: "";
-  width: 97.5%;
+  width: 0%;
   height: 1px;
   background-color: #010000;
   bottom: -0.3rem;
-  transition: all 0.7s ease;
-  transform: translateX(-410%);
+  right: 0%;
+  transition: all 0.25s ease 0s;
+}
+
+.landing_page_box_1 .container:hover::before {
+  width: 100%;
+  left: 0;
+  transition-delay: 0.4s;
 }
 
 .container .first_arrow {
   transition: all 0.7s ease;
-}
-
-.container:hover .first_arrow {
-  transform: translateX(400%);
 }
 
 .container .hidden_arrow {
@@ -123,18 +137,6 @@ header {
   transition: all 0.7s ease;
 }
 
-.container:hover .hidden_arrow .second_arrow {
-  transform: translateX(0);
-}
-
-.landing_page_box_1 .container:hover:after {
-  transform: translateX(410%);
-}
-
-.landing_page_box_1 .container:hover::before {
-  transform: translateX(0%);
-}
-
 .landing_page_box_2 {
   grid-column: 6/13;
 }
@@ -143,4 +145,44 @@ header {
   font-size: 3.5vw;
   line-height: 3.5vw;
   font-weight: 400;
+}
+
+.line_below {
+  position: relative;
+}
+
+.line_below::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #010000;
+  bottom: -0.3rem;
+  left: 0;
+  transition: all 0.7s ease;
+}
+
+.line_below_hover {
+  position: relative;
+}
+
+.hidden_line {
+  overflow: hidden;
+  padding-bottom: 0.4rem;
+}
+
+.line_below_hover::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #010000;
+  bottom: -0.3rem;
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+.line_below_hover:hover::after {
+  width: 100%;
+  left: 0;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="./style.css">
     <!-- remixicon css -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -36,20 +37,28 @@
                 </svg>
             </div>
             <div class="nav_section">
-                <a href="">Overview</a>
-                <a href="">Work</a>
-                <a href="">Feed</a>
+                <span class="hidden_line">
+                    <a class="line_below" href="">Overview</a>
+                </span>
+                <span class="hidden_line">
+                    <a class="line_below_hover" href="">Work</a>
+                </span>
+                <span class="hidden_line">
+                    <a class="line_below_hover" href="">Feed</a>
+                </span>
             </div>
-            <a href="">Pricing</a>
+            <span class="hidden_line pricing_span">
+                <a class="line_below_hover" href="">Pricing</a>
+            </span>
         </nav>
     </header>
-    <main>
+    <main data-scroll-container>
         <section class="landing_page">
             <div class="grid-container landing_page_container">
                 <div class="landing_page_box_1">
                     <p>Pick a plan, submit a job request,<br>and your project will kickoff within<br>24 hours.</p>
                     <div class="explore_button">
-                        <div class="container">
+                        <div class="container explore_button_container">
                             <a href="">Explore Plans</a>
                             <i class="ri-arrow-right-line first_arrow"></i>
                             <div class="hidden_arrow">
@@ -67,7 +76,17 @@
                 </div>
             </div>
         </section>
+        <section class="subscribe_section">
+            <div>SUBSCRIBE</div>
+            <img src="https://www.datocms-assets.com/106915/1717687146-betteroffstudio_work-loop_4.jpg?auto=format%2Ccompress&fit=max&h=800&w=800"
+                alt="">
+            <div>SUBSCRIBE</div>
+        </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
     <script src="./index.js"></script>
 </body>
 

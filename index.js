@@ -4,7 +4,6 @@ const locoScroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true
 });
-console.log("Locomotive Scroll initialized", locoScroll);
 
 // Update ScrollTrigger whenever Locomotive Scroll updates
 locoScroll.on("scroll", ScrollTrigger.update);
@@ -63,40 +62,14 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
     })
 })
 
-// gsap.to(".subscribe_div", {
-//     xPercent: -100,
-//     duration: 60,
-//     repeat: -1,
-//     ease: "none",
-// });
+gsap.to(".subscribe_div", {
+    xPercent: -100,
+    duration: 60,
+    repeat: -1,
+    ease: "none",
+});
 
-function landingPageLoadingAnimation() {
-    gsap.from(".landing_page_box_2 h2 div div", {
-        delay: 0.5,
-        y: 100,
-        duration: 1.2,
-    });
 
-    const tl = gsap.timeline();
-
-    tl.from('.subscribe_track', {
-        delay: 0.5,
-        y: 400,
-        duration: 1,
-    })
-
-    tl.from('.nav', {
-        y: 40,
-        duration: 0.8,
-        opacity: 0,
-    }, "-=0.1")
-
-    tl.from('.landing_page_box_1', {
-        y: 40,
-        duration: 0.8,
-        opacity: 0,
-    }, "-=0.7")
-}
 gsap.to('.subscribe_section', {
     scale: 1.5,
     scrollTrigger: {
@@ -108,3 +81,55 @@ gsap.to('.subscribe_section', {
         scrub: 3,      // Use true for a smooth scrub effect
     }
 });
+
+const loaderTimeline = gsap.timeline();
+
+loaderTimeline.from("#mask-rect", {
+    delay: 0.5,
+    duration: 2,        // Duration of the animation in seconds
+    attr: { y: "100%", height: "0%" },
+    ease: "slow(0.1,0.9,false)",
+});
+
+loaderTimeline.to("figure svg", {
+    delay: 0.3,
+    scale: 0.8,
+    y: -100,
+    duration: 0.5,
+})
+
+loaderTimeline.from(".loader_container div", {
+    y: "100%",
+    duration: 1,
+}, "-=0.5")
+
+loaderTimeline.to(".loader_container", {
+    delay: 1,
+    opacity: 0,
+    display: "none",
+})
+
+loaderTimeline.from(".landing_page_box_2 h2 div div", {
+    y: 100,
+    duration: 1.2,
+});
+
+loaderTimeline.from('.subscribe_track', {
+    y: 400,
+    duration: 1,
+}, "<")
+
+loaderTimeline.from('.nav', {
+    y: 40,
+    duration: 0.8,
+    opacity: 0,
+}, "-=0.1")
+
+loaderTimeline.from('.landing_page_box_1', {
+    y: 40,
+    duration: 0.8,
+    opacity: 0,
+}, "-=0.7")
+
+
+console.log(document.querySelector("#mask-rect"));

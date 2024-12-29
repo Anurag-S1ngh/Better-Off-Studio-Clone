@@ -18,6 +18,42 @@ a {
   text-decoration: none;
 }
 
+.loader_container {
+  z-index: 9;
+  position: fixed;
+}
+
+figure {
+  background-color: #1e1e1e;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 9;
+}
+
+figure svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #4b4b4b;
+  height: 10.5vw;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+.loading_svg_front {
+  fill: #f9f9f9;
+  z-index: 99;
+}
+
+.loader {
+  position: absolute;
+  background-color: #e6e7df;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -52,6 +88,7 @@ header {
 
 .logo svg {
   height: 1.3rem;
+  mix-blend-mode: difference;
 }
 
 .landing_page {

@@ -240,15 +240,16 @@ header {
 }
 
 .subscribe_section {
-  margin-top: 0.5rem;
+  cursor: default;
   overflow: hidden;
   height: 26rem;
+  margin-top: 1rem;
 }
 
 .subscribe_div h1 {
   font-family: "Impact", sans-serif;
   color: #1e1e1e;
-  font-size: 25rem;
+  font-size: 24rem;
   font-weight: 700;
   white-space: nowrap;
   margin-right: 2rem;
@@ -269,9 +270,14 @@ header {
 
 .description_section {
   padding: 2rem 1.8rem;
-  margin-top: 12rem;
+  margin-top: 15rem;
 }
 
 .description_section h2 {
-  font-size: 3.5vw;
+  font-size: 3.2vw;
+  line-height: 1.1;
+}
+
+.description_para_1 {
+  margin-bottom: 3rem;
 }

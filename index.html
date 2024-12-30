@@ -16,14 +16,13 @@
 </head>
 
 <body>
-    <div class="loader_container">
+    <!-- <div class="loader_container">
         <figure class="relative text-white">
             <svg class="loading_svg_front" viewBox="0 0 279 161" fill="transparent" xmlns="http://www.w3.org/2000/svg"
                 class="w-[27.9rem] h-[16.1rem]">
 
                 <defs>
                     <mask id="mask">
-                        <!-- Mask applied from 70% (bottom 30%) -->
                         <rect id="mask-rect" x="0" y="00%" width="100%" height="100%" fill="white" />
                     </mask>
                 </defs>
@@ -106,7 +105,7 @@
         </figure>
         <div class="loader">
         </div>
-    </div>
+    </div> -->
     <div data-scroll-container class="locomotive_container">
         <header>
             <nav class="grid-container nav">
@@ -149,7 +148,7 @@
             </nav>
         </header>
         <main>
-            <section class="landing_page">
+            <section data-scroll data-scroll-speed="4.5" data-scroll-position="top" class="landing_page">
                 <div class="grid-container landing_page_container">
                     <div class="landing_page_box_1">
                         <p>Pick a plan, submit a job request,<br>and your project will kickoff within<br>24 hours.</p>
@@ -181,23 +180,21 @@
             <section class="subscribe_section">
                 <div class="subscribe_track">
                     <div class="subscribe_div">
+                        <h1>SUBSCRIBE</h1>
                         <img src="https://www.datocms-assets.com/106915/1717687146-betteroffstudio_work-loop_4.jpg?auto=format%2Ccompress&fit=max&h=800&w=800"
                             alt="">
                         <h1>SUBSCRIBE</h1>
                         <img loading="lazy"
                             src="https://www.datocms-assets.com/106915/1717687178-betteroffstudio_work-loop_10.jpg?auto=format%2Ccompress&fit=max&h=800&w=800"
                             alt="">
-                    </div>
-                    <div class="subscribe_div">
                         <h1>SUBSCRIBE</h1>
-                        <img loading="lazy"
-                            src="https://www.datocms-assets.com/106915/1717687178-betteroffstudio_work-loop_10.jpg?auto=format%2Ccompress&fit=max&h=800&w=800"
+                        <img src="https://www.datocms-assets.com/106915/1717687146-betteroffstudio_work-loop_4.jpg?auto=format%2Ccompress&fit=max&h=800&w=800"
                             alt="">
                     </div>
                 </div>
             </section>
-            <section class="description_section">
-                <h2>
+            <section data-scroll class="description_section">
+                <h2 class="description_para_1">
                     <div>
                         <div>No more inflated agency fees. No more flaky</div>
                     </div>
@@ -211,7 +208,7 @@
                         <div>high velocity, and sensibly priced.</div>
                     </div>
                 </h2>
-                <h2>
+                <h2 class="description_para_2">
                     <div>
                         <div>Get transformational talent and capabilities</div>
                     </div>

@@ -64,72 +64,79 @@ document.querySelector('.container').addEventListener('mouseleave', () => {
 
 gsap.to(".subscribe_div", {
     xPercent: -100,
-    duration: 60,
+    duration: 150,
     repeat: -1,
     ease: "none",
 });
 
 
 gsap.to('.subscribe_section', {
-    scale: 1.5,
+    scale: 1.3,
+    y: 40,
+    ease: "expoScale(10,2.5,power2.out)",
+
     scrollTrigger: {
         trigger: '.subscribe_section',
         scroller: '[data-scroll-container]', // Ensure this is correctly set for smooth scrolling
         markers: true,  // Optional, only for debugging
-        start: 'top 45%',  // Adjust this if the trigger isn't starting as expected
+        start: 'top 50%',  // Adjust this if the trigger isn't starting as expected
         end: 'top -80%',    // Adjust this if the animation is ending too soon or too late
-        scrub: 3,      // Use true for a smooth scrub effect
+        scrub: 1,      // Use true for a smooth scrub effect
     }
 });
 
-const loaderTimeline = gsap.timeline();
+// loaderAnimation();
 
-loaderTimeline.from("#mask-rect", {
-    delay: 0.5,
-    duration: 2,        // Duration of the animation in seconds
-    attr: { y: "100%", height: "0%" },
-    ease: "slow(0.1,0.9,false)",
-});
+function loaderAnimation() {
+    const loaderTimeline = gsap.timeline();
 
-loaderTimeline.to("figure svg", {
-    delay: 0.3,
-    scale: 0.8,
-    y: -100,
-    duration: 0.5,
-})
+    loaderTimeline.from("#mask-rect", {
+        delay: 0.5,
+        duration: 2,        // Duration of the animation in seconds
+        attr: { y: "100%", height: "0%" },
+        ease: "slow(0.1,0.9,false)",
+    });
 
-loaderTimeline.from(".loader_container div", {
-    y: "100%",
-    duration: 1,
-}, "-=0.5")
+    loaderTimeline.to("figure svg", {
+        delay: 0.3,
+        scale: 0.8,
+        y: -100,
+        duration: 0.5,
+    })
 
-loaderTimeline.to(".loader_container", {
-    delay: 1,
-    opacity: 0,
-    display: "none",
-})
+    loaderTimeline.from(".loader_container div", {
+        y: "100%",
+        duration: 1,
+    }, "-=0.5")
 
-loaderTimeline.from(".landing_page_box_2 h2 div div", {
-    y: 100,
-    duration: 1.2,
-});
+    loaderTimeline.to(".loader_container", {
+        opacity: 0,
+        display: "none",
+    })
 
-loaderTimeline.from('.subscribe_track', {
-    y: 400,
-    duration: 1,
-}, "<")
+    loaderTimeline.from(".landing_page_box_2 h2 div div", {
+        y: 100,
+        duration: 1.2,
+    });
 
-loaderTimeline.from('.nav', {
-    y: 40,
-    duration: 0.8,
-    opacity: 0,
-}, "-=0.1")
+    loaderTimeline.from('.subscribe_track', {
+        y: 400,
+        duration: 1,
+    }, "<")
 
-loaderTimeline.from('.landing_page_box_1', {
-    y: 40,
-    duration: 0.8,
-    opacity: 0,
-}, "-=0.7")
+    loaderTimeline.from('.nav', {
+        y: 40,
+        duration: 0.8,
+        opacity: 0,
+    }, "-=0.1")
 
+    loaderTimeline.from('.landing_page_box_1', {
+        y: 40,
+        duration: 0.8,
+        opacity: 0,
+    }, "-=0.7")
+}
+
+gsap.to('')
 
 console.log(document.querySelector("#mask-rect"));

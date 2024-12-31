@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #010000;
 }
 
 html {
@@ -16,6 +15,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #010000;
 }
 
 .loader_container {
@@ -61,7 +61,7 @@ figure svg {
 }
 
 header {
-  padding: 2.2rem 1.8rem;
+  padding: 2.2rem 1.6rem;
 }
 
 .logo {
@@ -92,7 +92,7 @@ header {
 }
 
 .landing_page {
-  padding: 2.2rem 1.8rem;
+  padding: 2.2rem 1.6rem;
   margin-top: 6rem;
   padding-bottom: 0;
 }
@@ -277,9 +277,8 @@ header {
 }
 
 .description_section {
-  padding: 2rem 1.8rem;
-  margin-top: 15rem;
-  margin-bottom: 5rem;
+  padding: 2.2rem 1.6rem;
+  margin-top: 12rem;
 }
 
 .description_section h2 {
@@ -293,4 +292,47 @@ header {
 
 .description_section h2 div {
   overflow: hidden;
+}
+
+.feature_section {
+  padding: 0rem 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 2rem;
+  color: #1e1e1e;
+  padding-top: 4.5rem;
+}
+
+.feature_border {
+  background-color: #cfd1ca;
+  margin-bottom: 2.4rem;
+  grid-column: 1/14;
+  height: 0.01px;
+}
+
+.feature_section_first_column {
+  text-transform: uppercase;
+  grid-column: 1/4;
+  font-size: 1.4rem;
+  color: #1e1e1e;
+}
+
+.feature_section_second_column {
+  grid-column: 7 / 11;
+  color: #1e1e1e;
+  font-size: 1.4rem;
+  padding-right: 0.52rem;
+}
+
+.feature_section_second_column p {
+  color: #949691 !important;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.feature_section_third_column {
+  grid-column: 12/14;
+  font-size: 1.4rem;
+  color: #1e1e1e;
 }

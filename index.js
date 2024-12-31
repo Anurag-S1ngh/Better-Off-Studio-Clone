@@ -149,7 +149,7 @@ gsap.from('.description_para_1 div div', {
         trigger: '.description_section',
         scroller: '[data-scroll-container]',
         markers: false,  // Set to false once debugging is done
-        start: 'top 80%',
+        start: 'top 85%',
         end: 'top 20%',
     }
 });
@@ -164,7 +164,18 @@ gsap.from('.description_para_2 div div', {
         trigger: '.description_section',
         scroller: '[data-scroll-container]',
         markers: false,  // Set to false once debugging is done
-        start: 'top 55%',
+        start: 'top 65%',
         end: 'top 0%',
     }
 });
+
+gsap.from('.feature_section', {
+    y: 40,
+    duration: 1,
+    scrollTrigger: {
+        trigger: '.feature_section',
+        scroller: '[data-scroll-container]',
+        markers: true,
+        start: 'top 90%',
+    }
+})

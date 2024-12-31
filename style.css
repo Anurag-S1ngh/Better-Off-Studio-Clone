@@ -185,12 +185,20 @@ header {
 .landing_page_box_2 h2 {
   overflow: hidden;
   font-size: 3.3vw;
-  line-height: 3.5vw;
+  line-height: 3.2vw;
   font-weight: 500;
+}
+
+.landing_page_box_2 h2 div {
+  word-spacing: -4px;
 }
 
 .landing_page_box_2 div {
   overflow: hidden;
+}
+
+.landing_page_box_2 h2 div div {
+  padding-bottom: 0.3rem;
 }
 
 .line_below {
@@ -271,6 +279,7 @@ header {
 .description_section {
   padding: 2rem 1.8rem;
   margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 
 .description_section h2 {
@@ -280,4 +289,8 @@ header {
 
 .description_para_1 {
   margin-bottom: 3rem;
+}
+
+.description_section h2 div {
+  overflow: hidden;
 }

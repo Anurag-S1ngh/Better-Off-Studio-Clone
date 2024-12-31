@@ -2,8 +2,12 @@
 // Initialize Locomotive Scroll
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
-    smooth: true
+    smooth: true,         // Enable smooth scrolling
+    smoothMobile: true,   // Enable smooth scrolling on mobile
+    multiplier: 1.2,      // Reduce multiplier to make scrolling slower
+    friction: 0         // Adjust the friction for a smoother deceleration
 });
+
 
 // Update ScrollTrigger whenever Locomotive Scroll updates
 locoScroll.on("scroll", ScrollTrigger.update);
@@ -136,7 +140,31 @@ function loaderAnimation() {
         opacity: 0,
     }, "-=0.7")
 }
+gsap.from('.description_para_1 div div', {
+    y: 100,
+    duration: 1.5,  // Increased duration for a more gradual effect
+    stagger: 0.08,
+    ease: "power4.out",  // Smoother easing function
+    scrollTrigger: {
+        trigger: '.description_section',
+        scroller: '[data-scroll-container]',
+        markers: false,  // Set to false once debugging is done
+        start: 'top 80%',
+        end: 'top 20%',
+    }
+});
 
-gsap.to('')
 
-console.log(document.querySelector("#mask-rect"));
+gsap.from('.description_para_2 div div', {
+    y: 100,
+    duration: 1.5,  // Increased duration for a more gradual effect
+    stagger: 0.08,
+    ease: "power4.out",  // Smoother easing function
+    scrollTrigger: {
+        trigger: '.description_section',
+        scroller: '[data-scroll-container]',
+        markers: false,  // Set to false once debugging is done
+        start: 'top 55%',
+        end: 'top 0%',
+    }
+});

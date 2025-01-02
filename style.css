@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-main {
-  overflow-x: hidden;
-}
-
 html {
   scroll-behavior: smooth;
   /* font-family: "Helvetica Neue", sans-serif; */
@@ -314,6 +310,7 @@ header {
   column-gap: 2rem;
   color: #1e1e1e;
   padding-top: 4.5rem;
+  margin-bottom: 15vw;
 }
 
 .feature_border {
@@ -354,7 +351,6 @@ header {
 .project_section {
   background-color: #ffffff;
   padding: 1.6rem;
-  height: 240vh;
 }
 
 .project_section_header {
@@ -406,6 +402,7 @@ header {
 
 .project_section_video_section {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .project_video {

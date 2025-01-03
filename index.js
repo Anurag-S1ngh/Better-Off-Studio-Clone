@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,         // Enable smooth scrolling
         smoothMobile: true,   // Enable smooth scrolling on mobile
-        multiplier: 0.8,      // Adjust scroll multiplier
+        multiplier: 1.2,      // Adjust scroll multiplier
         friction: 0.1          // Adjust the friction for a smoother deceleration
     });
 
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Infinite scrolling effect for subscribe div
     gsap.to(".subscribe_div", {
         xPercent: -100,
         duration: 150,
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "none",
     });
 
-    // Subscribe section scaling animation with ScrollTrigger
     gsap.to('.subscribe_section', {
         scale: 1.5,
         y: 40,
@@ -184,9 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: '.project_section_video_gsap',
             scroller: '[data-scroll-container]',
             markers: true,
-            start: 'top 25%',
-            end: 'top -40%',
-            scrub: 2.25,
+            start: 'top -10%',
+            end: 'top -80%',
+            scrub: 1,
         },
         ease: "power1.in",
     });
@@ -197,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: '.project_section_video_gsap',
             scroller: '[data-scroll-container]',
             markers: true,
-            start: 'top 25%',
+            start: 'top -10%',
             end: 'top -30%',
             scrub: 4,
         },
@@ -211,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: '.project_section_video_gsap',
             scroller: '[data-scroll-container]',
             markers: true,
-            start: 'top 25%',
+            start: 'top -10%',
             end: 'top -30%',
             scrub: 4,
         },
@@ -223,13 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('mousemove', (e) => {
         const scrollContainer = document.querySelector('[data-scroll-container]');
-        const scrollY = locoScroll.scroll.instance.scroll.y; // Get the current scroll position from Locomotive Scroll
+        const scrollY = locoScroll.scroll.instance.scroll.y;
 
-        const x = e.clientX; // Horizontal position of the mouse
-        const y = e.clientY; // Vertical position of the mouse adjusted by scroll position
+        const x = e.clientX;
+        const y = e.clientY;
 
         gsap.to(circle, {
-            duration: 0.9,
+            duration: 1,
             x: x,
             y: y,
             ease: "power3.out",
@@ -245,10 +243,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.project_section_video_gsap').addEventListener("mouseleave", () => {
         gsap.to(circle, {
+            duration: 0.6,
             scale: 0,
         })
     })
 
+    document.addEventListener('scroll', () => {
+        document.querySelector('.project_section_video_gsap').addEventListener("mouseleave", () => {
+            gsap.to(circle, {
+                duration: 0,
+                scale: 0,
+            })
+        })
+    })
 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();

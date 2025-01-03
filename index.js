@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: '.subscribe_section',
             scroller: '[data-scroll-container]',
             start: 'top 50%',
-            end: 'top -100%',
+            end: 'top -90%',
             scrub: 1,
         },
         ease: "slow(0.1,0.4,false)",
@@ -236,6 +236,19 @@ document.addEventListener('DOMContentLoaded', () => {
             overwrite: "auto",
         });
     });
+
+    document.querySelector('.project_section_video_gsap').addEventListener("mouseenter", () => {
+        gsap.to(circle, {
+            scale: 1,
+        })
+    })
+
+    document.querySelector('.project_section_video_gsap').addEventListener("mouseleave", () => {
+        gsap.to(circle, {
+            scale: 0,
+        })
+    })
+
 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();

@@ -189,8 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: 2.25,
         },
         ease: "power1.in",
-
-
     });
 
     gsap.to('.project_section_work div:nth-child(1)', {
@@ -219,6 +217,24 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         ease: "slow(0.1,0.4,false)",
 
+    });
+
+    const circle = document.querySelector('.project_video_cursor');
+
+    document.addEventListener('mousemove', (e) => {
+        const scrollContainer = document.querySelector('[data-scroll-container]');
+        const scrollY = locoScroll.scroll.instance.scroll.y; // Get the current scroll position from Locomotive Scroll
+
+        const x = e.clientX; // Horizontal position of the mouse
+        const y = e.clientY; // Vertical position of the mouse adjusted by scroll position
+
+        gsap.to(circle, {
+            duration: 0.9,
+            x: x,
+            y: y,
+            ease: "power3.out",
+            overwrite: "auto",
+        });
     });
 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

@@ -26,6 +26,10 @@ a {
   color: #010000;
 }
 
+main{
+  margin-top: 11.5rem;
+}
+
 .loader_container {
   z-index: 9;
   position: fixed;
@@ -69,7 +73,8 @@ figure svg {
 }
 
 header {
-  /* position: fixed; */
+  width: 100%;
+  position: fixed;
   z-index: 99999999;
   padding: 2.2rem 1.6rem;
 }
@@ -80,7 +85,7 @@ header {
 
 .nav_section {
   grid-column: 6/10;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   display: flex;
   gap: 1.8rem;
   color: #010000;
@@ -93,11 +98,11 @@ header {
 }
 
 .pricing_span a {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .logo svg {
-  height: 1.3rem;
+  height: 1.1rem;
   mix-blend-mode: difference;
 }
 
@@ -112,13 +117,14 @@ header {
 }
 
 .landing_page_box_1 p {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   line-height: 1.8vw;
+  font-weight: 400;
 }
 
 .landing_page_box_1 .explore_button {
   overflow: hidden;
-  padding-bottom: 0.3rem;
+  padding-bottom: 1rem;
   width: 14rem;
 }
 
@@ -127,7 +133,7 @@ header {
 }
 
 .landing_page_box_1 .container {
-  font-size: 1.4rem;
+  font-size: 1.18rem;
   margin-top: 2.7rem;
   width: 14rem;
   display: flex;
@@ -139,7 +145,7 @@ header {
   position: absolute;
   content: "";
   width: 97.5%;
-  height: 1.4px;
+  height: 1.2px;
   background-color: #010000;
   bottom: -0.3rem;
   left: 0;
@@ -255,28 +261,26 @@ header {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  overflow: hidden;
+  margin-top: 4vw;
 }
 
 .subscribe_section {
   cursor: default;
-  overflow: hidden;
-  height: 26rem;
-  margin-top: 1rem;
+  /* overflow: hidden; */
 }
 
 .subscribe_div h1 {
-  font-family: "Impact", sans-serif;
+  font-family: "FoundersGrotesk";
   color: #1e1e1e;
-  font-size: 24rem;
+  font-size: 30vw;
   font-weight: 700;
-  white-space: nowrap;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin: 0 2rem 0rem 2rem;
 }
 
 .subscribe_track img {
-  height: 20rem;
-  margin-bottom: 0.8rem;
+  height: 19vw;
+  margin-top: 3.4vw;
 }
 
 .subscribe_div {
@@ -284,6 +288,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -8vw;
+  margin-bottom: -5vw;
 }
 
 .description_section {

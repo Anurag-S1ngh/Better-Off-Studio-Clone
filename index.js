@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         smooth: true,         // Enable smooth scrolling
         smoothMobile: true,   // Enable smooth scrolling on mobile
         multiplier: 1.2,      // Adjust scroll multiplier
-        friction: 0.1          // Adjust the friction for a smoother deceleration
+        friction: 0.4          // Adjust the friction for a smoother deceleration
     });
 
     // Update ScrollTrigger when LocomotiveScroll fires a scroll event
@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gsap.to('.subscribe_section', {
-        scale: 1.5,
-        y: 40,
+        scale: 1.4,
         scrollTrigger: {
             trigger: '.subscribe_section',
             scroller: '[data-scroll-container]',
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             end: 'top -90%',
             scrub: 1,
         },
-        ease: "slow(0.1,0.4,false)",
+        ease: "expoScale(1,2,power2.out)",
     });
 
     // Loader animation timeline
